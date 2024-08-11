@@ -2,4 +2,11 @@
 //we categorise into primitive and non-primitive data types 
 
 //PRIMITIVE DATA TYPES
+//NON-PRIMITIVE
+// ***************CHECK NOTES FOR ABOVE TOPIC*************************
+
+// *******************MEMORY*********************
+//Stack-> Primitive Data Types
+//Heap Memory ->Non-Primitive Data Types
+
 
