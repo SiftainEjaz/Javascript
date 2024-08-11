@@ -2,3 +2,4 @@
 //we categorise into primitive and non-primitive data types 
 
 //PRIMITIVE DATA TYPES
+
