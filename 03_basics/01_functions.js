@@ -5,7 +5,7 @@ function sayMyName()
     console.log("Siftain Ejaz")
 }
 
-sayMyName()
+//sayMyName()
 
 function addNumbers(number1,number2)          //number1 and number2 are parameters
 {
@@ -13,7 +13,7 @@ function addNumbers(number1,number2)          //number1 and number2 are paramete
     
 }
 
-const result = addNumbers(4,5)       //4 and 5 are arguments
+//const result = addNumbers(4,5)       //4 and 5 are arguments
 //console.log(result);
 
 function add(num1,num2)
@@ -46,7 +46,44 @@ function loginUserMessage(username="Saif") //Value given is called default value
 }
 
 //const message = loginUserMessage("siftain")
-console.log(loginUserMessage("Siftain"));   
+//console.log(loginUserMessage("Siftain"));   
+
+// *************REST OPERATOR*********************************
+
+function calculateCartPrice(val1,val2,...num1)   //"..." is called Rest operator  . 
+{
+    return num1                        //Will combine any no. of values into an array
+}
+
+//console.log(calculateCartPrice(100,200,300,400));
+
+const user={
+    username:"Siftain",
+    age:26
+}
+
+function handleObject(anyObject)
+{
+    console.log(`username is ${anyObject.username} and age is ${anyObject.age}`);
+    
+}
+
+//handleObject(user)
+// handleObject({
+//     username:"Saif",
+//     age:30
+// })
+
+const myNewArr=[100,200,400]
+function handleArray(arr)
+{
+    return arr[0]
+}
+//console.log(handleArray(myNewArr));
+console.log(handleArray([10,20,30]))
+
+
+
 
 
 
