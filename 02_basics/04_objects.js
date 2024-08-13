@@ -61,15 +61,41 @@ const users=
     }
 ]
 
-console.log(tinder)
-console.log(Object.keys(tinder))  //Returns an array of keys of the object
-console.log(Object.values(tinder)) //returns an array of values of the object
-console.log(Object.entries(tinder));  //return an array of array of Key value of the object
+// console.log(tinder)
+// console.log(Object.keys(tinder))  //Returns an array of keys of the object
+// console.log(Object.values(tinder)) //returns an array of values of the object
+// console.log(Object.entries(tinder));  //return an array of array of Key value of the object
 
-console.log(tinder.hasOwnProperty('name'));  //Checking whether property is available in the particular object or not
+// console.log(tinder.hasOwnProperty('name'));  //Checking whether property is available in the particular object or not
+
+const course={
+    courseName:"JS in Hindi",
+    price:"999",
+    courseInstructor:"Hitesh"
+}
 
 
+//  ****************OBJECT DESTRUCTURING*************************************
 
+
+//course.courseInstructor
+
+
+//after colon, short name given to the proeprties of object
+const {courseInstructor:instructor,price:MRP}=course  //after equals represents the object which is to be destructur.
+console.log(instructor,MRP);                          //afer const, the values that needs to be fetched
+
+//API gives output in JSON Format(Can be an array as well)
+//JSON -> Javascript Object Notation
+
+/*
+Example of JSON -> JSON Structuring requires the keys to be in the form of string, hence the quotes
+{
+    "name":"Siftain",
+    "course":"JS in Hindi",
+    "price":"Free"
+}
+*/
 
 
 
