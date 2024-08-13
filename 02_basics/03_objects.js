@@ -31,17 +31,20 @@ JsUser.age=34
 JsUser.age=30
 //console.log(JsUser);
 
+//Defining a function inside the object
 JsUser.greeting=function(){
     console.log("Hello Hello");
 }
 
 JsUser.greeting2=function(){
-    console.log(`Hello,this is ${this.name}`);   //this is used to refer to the current object's properties
+    console.log(`Hello,this is ${this.name}`);   //'this' keyword is used to refer to the current object's properties
     
 }
 
 //console.log(JsUser.greeting2);   //Prints [Function(Anonymous)]
-console.log(JsUser.greeting2())
+console.log(JsUser.greeting2())    //Prints whatever is inside the function alongwith undefined
+
+
 
 
 
