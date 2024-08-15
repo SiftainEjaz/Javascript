@@ -1,4 +1,4 @@
-//for of Loops  -> Need to write onyl function statement. No increment or decrement
+//****************FOR OF LOOPS */  -> Need to write onyl function statement. No increment or decrement
 
 const arr=[1,2,3,4,5]
 
@@ -16,7 +16,7 @@ const greeting="Hello World!"
     
 // }
 
-//Maps -> Holds key value pair and remembers the order of insertion.Only unique values
+//Maps -> Holds key value pair and remembers the order of insertion.Holds Only unique values
 
 const map=new Map();
 map.set('IN','India')
@@ -57,15 +57,16 @@ const myObject={
 //     console.log(`${key} shortcut is for ${myObject[key]}`); 
 // }
 
+
 //FOR IN WHEN APPLIED ON ARRAYS GIVES ONLY INDEXES
 // for (const val in arr) {
 //     console.log(`${arr[val]} is the element at position ${val}`);
 // }
 
 //Cant be iterated through Maps in fOR-IN Loops
-// for (const key in map) {
-//     console.log(key);
-// }
+for (const key in map) {
+    console.log(key);
+}
 
 // ****************FOR EACH LOOPS*************************
 
@@ -111,10 +112,10 @@ const myCoding=[
 ]
 
 // **********Iterating through Array of Objects*************************
-myCoding.forEach( (item) => {
-    console.log(item.language);
+// myCoding.forEach( (item) => {
+//     console.log(item.language);
     
-})
+// })
 
 
 
