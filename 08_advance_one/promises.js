@@ -46,7 +46,7 @@ const promiseFour=new Promise(function(resolve,reject){
         let error=true;
         if(!error)
         {
-            resolve({username:'Siftain',password:'123'})
+            resolve({username:'Siftain',password:'123'})   //Resolve function connects to then function during promise consumption
         }
         else
         {
@@ -56,7 +56,7 @@ const promiseFour=new Promise(function(resolve,reject){
 });
 
 
-//Chaining
+//Chaining or thenable
 promiseFour.then((user)=>{
     console.log(user);
     return user.username;
@@ -84,21 +84,51 @@ const promiseFive=new Promise(function(resolve,reject){
     },3000)
 })
 
-//Promise Consumption in a different way -> async await
- async function consumePromiseFive(){
-    try{
-        const response=await promiseFive
-        console.log(response);
+// *******************PROMISE CONSUMPTION USING ASYNC AWAIT *********************
+
+//async await can't handle errors directly
+async function consumePromiseFive(){
+   try {
+
+   const response = await promiseFive;      //Executed when no error are found. 'Resolve' is connected to 'try'
+   
+    console.log(response)
+   } 
+   catch (error)                             //Executed when error is found. 'Reject' is connected to 'catch'
+   {
+    console.log(error);
+   }
+}
+
+consumePromiseFive();
+
+// *************************************** FETCH **********************************
+
+// async function getAllUsers(){
+//    try {
+//     const response = await fetch('https://api.github.com/users/hiteshchoudhary')  //Fetch return a promise.
+//     const data=await response.json();     //Conversion of string to object takes time, hence need to await
+//     console.log(data);
+//     //console.log(response);
         
-    }
-    catch(error){
-        console.log(error);  
-    }
- }
+//    } catch (error) {
+//     console.log(error);
+    
+//    }
+// }
 
- consumePromiseFive();
+//getAllUsers()
 
-
-
+fetch('https://api.github.com/users/hiteshchoudhary')
+.then((response)=>{
+    return response.json();
+})
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=>{
+    console.log(error);
+    
+})
 
 
